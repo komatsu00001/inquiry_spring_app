@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--
+	controllerで指定してないURLをアクセスしたとき
+	ファイルがない場合のエラー画面
+	-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>404 Error</title>
+</head>
+<body>
+<h1 th:text="${status} + ' ' + ${error}">title</h1>
+<p>The request URL was not found on this server</p>
+<p ><a th:href="@{/inquiry">Back to Inquiry Index</a></p>
+</body>
+</html>
